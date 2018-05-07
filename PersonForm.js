@@ -88,7 +88,7 @@ checkCalendar(event){
     const out_3 = ['0','1'].some(item => item === date_3) ? date_3 : '';
     const out_4 = ['0','1','2','3','4','5','6','7','8','9'].some(item => item === date_4) ? date_4 : '';
     const out_5 = ['1','2'].some(item => item === date_5) ? date_5 : '';
-    const out_6 = ['0','1','2','3','4','5','6','7','8','9'].some(item => item === date_6) ? date_6 : '';
+    const out_6 = ['0','9'].some(item => item === date_6) ? date_6 : '';
     const out_7 = ['0','1','2','3','4','5','6','7','8','9'].some(item => item === date_7) ? date_7 : '';
     const out_8 = ['0','1','2','3','4','5','6','7','8','9'].some(item => item === date_8) ? date_8 : '';
     let dot_1 = '', dot_2 = '';

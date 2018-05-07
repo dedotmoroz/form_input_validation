@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DealForm from './Forms';
+import PersonForm from './PersonForm';
 
-ReactDOM.render(<DealForm />, document.getElementById('root'));
+ReactDOM.render(<PersonForm />, document.getElementById('root'));
 

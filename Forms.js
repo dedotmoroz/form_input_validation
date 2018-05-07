@@ -106,6 +106,12 @@ checkForm(){
     }
     }
 
+fillState(event){
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({[name] : value});
+}
+
 checkFill(event){
     const name = event.target.name;
     const namevalid = event.target.name + '_valid';
@@ -202,12 +208,12 @@ render(){
                         <React.Fragment>
                             <div className={'col-md-12 form-group ' + this.state.goods_valid}>
                             <label className="headlabel" htmlFor="goods">Название товара</label>
-                            <input key="goods" id="goods" name="goods" type="text" className="form-control" onBlur={this.checkFill.bind(this)}/>
+                            <input key="goods" id="goods" name="goods" type="text" className="form-control" value={this.state.goods} onChange={this.fillState.bind(this)} onBlur={this.checkFill.bind(this)}/>
                             <span className="help-block">Введите название товара</span>
                             </div>
                             <div className={'col-md-12 form-group ' + this.state.goods_description_valid}>
                             <label className="headlabel" htmlFor="goods_description">Описание товара</label>
-                            <input key="goods_description" id="goods_description" name="goods_description" type="text" className="form-control" onBlur={this.checkFillWords.bind(this)}/>
+                            <input key="goods_description" id="goods_description" name="goods_description" type="text" className="form-control" value={this.state.goods_description} onChange={this.fillState.bind(this)} onBlur={this.checkFillWords.bind(this)}/>
                             <span className="help-block">Введите описание товара</span>
                             </div>
                             </React.Fragment>
@@ -215,12 +221,12 @@ render(){
                             <React.Fragment>
                             <div className={'col-md-12 form-group ' + this.state.service_valid}>
                             <label className="headlabel" htmlFor="service">Название услуги</label>
-                            <input key="service" id="service" name="service" type="text" className="form-control" onBlur={this.checkFill.bind(this)}/>                   
+                            <input key="service" id="service" name="service" type="text" className="form-control" value={this.state.service} onChange={this.fillState.bind(this)} onBlur={this.checkFill.bind(this)}/>                   
                             <span className="help-block">Введите название услуги</span>
                             </div>
                             <div className={'col-md-12 form-group ' + this.state.service_description_valid}>
                             <label className="headlabel" htmlFor="service_description">Описание услуги</label>
-                            <input key="service_description" id="service_description" name="service_description" type="text" className="form-control" onBlur={this.checkFillWords.bind(this)}/>
+                            <input key="service_description" id="service_description" name="service_description" type="text" className="form-control" value={this.state.service_description} onChange={this.fillState.bind(this)} onBlur={this.checkFillWords.bind(this)}/>
                             <span className="help-block">Введите описание услуги</span>
                             </div>
                             </React.Fragment>
